@@ -6,3 +6,46 @@
 body {
   background-color: #cfcfff;
 }
+
+.loading {
+  margin: 40px auto; 
+  width: 200px; 
+}
+
+.single-story {
+
+  width: 300px; 
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px auto; 
+  border: 1px solid blue; 
+  border-radius: 5px;   
+}
+
+.single-story::after {
+  content: ''; 
+  clear: both; 
+  display: table;
+}
+
+.title {
+  margin-bottom: 10px; 
+}
+
+.info {
+  color: rgb(162, 162, 162);
+  font-size: .8rem; 
+}
+.read-link {
+  color: lightblue; 
+  text-decoration: none;
+  font-size: .9rem;
+}
+.btn-remove {
+  font-size: .8rem;
+  color: rgb(196, 25, 25);
+  border: 0px; 
+  outline: 0px;
+  background-color: transparent;
+  margin-left: 20px;
+}
