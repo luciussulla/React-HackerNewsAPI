@@ -31,25 +31,36 @@ const AppProvider = ({children})=> {
     }
 
   }
+  /* HANDLERS WITH DISPATCH */ 
+
+  const searchHandle = (query)=> {
+    console.log(query)
+    dispatch({type: HANDLE_SEARCH, payload: query}) 
+  }
 
   const removeStory = (id)=> {
     console.log(id)
     dispatch({type: REMOVE_STORY, payload: id})
-
   }
+
+  const handlePage = (value)=> {
+    console.log(value, "value in handle Page")
+    dispatch({type: HANDLE_PAGE, payload: value})
+  }
+
+  /* HANDLERS */ 
 
   useEffect(()=> {
     fetchData(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
-  },[])
+  },[state.query, state.page])
 
   return (
     <AppContext.Provider value={{
-      ...state, removeStory
+      ...state, removeStory, searchHandle, handlePage
     }}>
       {children}
     </AppContext.Provider>
   )
-
 }
 
 export const useGlobalContext = ()=> {

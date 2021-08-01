@@ -1,6 +1,7 @@
 * {
   margin: 0; 
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
   background-color: #fff;
   padding: 10px;
   margin: 10px auto; 
-  border: 1px solid blue; 
   border-radius: 5px;   
 }
 
@@ -49,3 +49,42 @@ body {
   background-color: transparent;
   margin-left: 20px;
 }
+/* form */ 
+.form {
+  width: 300px; 
+  margin: 20px auto; 
+}
+
+.form-field {
+  background-color: transparent;
+  border: transparent; 
+  outline: 0px; 
+  border-bottom: 2px solid gray; 
+  padding: 5px; 
+}
+
+.num-btn {
+  background-color: rgb(110, 110, 233);
+  color: #fff; 
+  border:transparent; 
+  border-radius: 5px;
+  padding: 5px 7px; 
+  display: inline-block; 
+  margin: 0 20px;
+}
+.num-btn:disabled {
+  cursor: not-allowed;
+}
+.btn-container {
+  /* border: 1px solid red;  */
+  position: relative; 
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 250px; 
+  padding: 0 10px; 
+}
+.page-display {
+  display: inline-block; 
+  text-align: center;
+}
+
