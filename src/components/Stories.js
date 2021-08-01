@@ -1,5 +1,6 @@
 import React from 'react'
 import { useGlobalContext } from '../contexts/context'
+import Spinner from './Spinner'
 
 export default function Stories() {
   const {isLoading, hits, removeStory} = useGlobalContext()
@@ -7,9 +8,7 @@ export default function Stories() {
   // console.log(isLoading)
 
   if(isLoading) {
-    return <div className="loading">
-      <p>this is loading</p>
-    </div>
+    return <Spinner/>
   } 
 
   return (

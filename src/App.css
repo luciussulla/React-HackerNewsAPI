@@ -8,13 +8,45 @@ body {
   background-color: #cfcfff;
 }
 
-.loading {
+.spinner-container {
+  position: relative; 
   margin: 40px auto; 
-  width: 200px; 
+  width: 64px; 
+  height: 64px; 
+  background-color: #cfcfff;
+  /* border: 1px solid black; */
+  border-radius: 100px; 
+}
+
+.spinner-container::before {
+  position: absolute; 
+  content: '';
+  width: 64px; 
+  height: 64px; 
+  /* border: 64px;  */
+  background-color: #cfcfff;
+  box-shadow: inset -5px 0px 0 5px #333;
+  clip: rect(0, 64px, 32px, 0px);
+  border-radius: 64px; 
+  animation: spin .5s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: inset -5px 0px 0 5px #333;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: inset -1px 0px 0 1px #333;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: inset -5px 0px 0 5px #333;
+  }
 }
 
 .single-story {
-
   width: 300px; 
   background-color: #fff;
   padding: 10px;
